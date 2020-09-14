@@ -83,21 +83,20 @@ output：
 net.ipv4.ip_forward = 1
  
 Quagga配置文件例子在/usr/share/doc/quagga/examples/中，每个功能对应各自配置文件，需将其拷贝至/etc/quagga并改名及
-
 权限
 
-root@bridge:/#cp /usr/share/doc/quagga/examples/*.sample /etc/quagga/
-root@bridge:/# cd /etc/quagga
-root@bridge:/etc/quagga#mv babeld.conf.sample babeld.conf
-root@bridge:/etc/quagga#mv isisd.conf.sample isisd.conf 
-root@bridge:/etc/quagga#mv ospfd.conf.sample ospfd.conf 
-root@bridge:/etc/quagga#mv ripngd.conf.sample ripngd.conf 
-root@bridge:/etc/quagga#mv zebra.conf.sample zebra.conf 
-root@bridge:/etc/quagga#mv bgpd.conf.sample bgpd.conf 
-root@bridge:/etc/quagga#mv ospf6d.conf.sample ospf6d.conf 
-root@bridge:/etc/quagga#mv ripd.conf.sample ripd.conf 
-root@bridge:/etc/quagga#mv vtysh.conf.sample vtysh.conf
-root@bridge:/etc/quagga#chown quagga:quagga *
+#cp /usr/share/doc/quagga/examples/*.sample /etc/quagga/
+#cd /etc/quagga
+#mv babeld.conf.sample babeld.conf
+#mv isisd.conf.sample isisd.conf 
+#mv ospfd.conf.sample ospfd.conf 
+#mv ripngd.conf.sample ripngd.conf 
+#mv zebra.conf.sample zebra.conf 
+#mv bgpd.conf.sample bgpd.conf 
+#mv ospf6d.conf.sample ospf6d.conf 
+#mv ripd.conf.sample ripd.conf 
+#mv vtysh.conf.sample vtysh.conf
+#chown quagga:quagga *
 
 选择要启动的路由协议Edit which routing protocols are to run: 
 
