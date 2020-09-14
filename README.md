@@ -58,8 +58,10 @@ $su
 #cd /   
 #sudo apt-get install quagga   
  
-在Linux系统中，路由表和转发数据包的功能都是Linux内核所提供。在我们的Ubuntu系统中，默认情况下是没有开启数据包转发功能的。开启方式：   
-#sudo nano /etc/sysctl.conf   
+在Linux系统中，路由表和转发数据包的功能都是Linux内核所提供。在我们的Ubuntu系统中，默认情况下是没有开启数据包转发功能的。
+开启方式：   
+
+#sudo nano /etc/sysctl.conf      
 
 在打开的文件最后一行加入并保存退出   
 
