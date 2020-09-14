@@ -1,11 +1,11 @@
 # quagga_router_linux
-quagga路由器软件在linux安装设置（ubuntu,CentOS,Debian,RedHat）
+quagga路由器软件在linux安装设置（ubuntu,CentOS,Debian,RedHat）- Robin
+
+经常有很多童鞋手上没有适合刷OpenWRT固件的路由器或一台独立机器安装OpenWRT，但又需要一个功能完善（可完成Cisco路由器大部分功能），搭建环境灵活的软件路由器，那下面介绍的运行在linux系统上的Quagga就是非常好的选择
 
 什么是Quagga   
 
-  Quagga软件原名是Zebra是由一个日本开发团队编写的一个以GNU版权方式发布的软件。Quagga项目开始于1996年，可以使用
-
-Quagga将linux机器打造成一台功能完备的路由器。   
+  Quagga软件原名是Zebra是由一个日本开发团队编写的一个以GNU版权方式发布的软件。Quagga项目开始于1996年，可以使用Quagga将linux机器打造成一台功能完备的路由器。   
 
 Quagga支持的路由协议   
 
@@ -23,9 +23,7 @@ Quagga的特性
 
   运行速度快：因为使用了模块化的设计，使得Quagga的运行速度比一般的路由选择程序要快。   
 
-  可靠性高：在所有软件模块都失败的情况下，路由器可以继续保持连接并且daemons也会继续运行。故障诊断不必离线的状态
-
-下被诊断和更正   
+  可靠性高：在所有软件模块都失败的情况下，路由器可以继续保持连接并且daemons也会继续运行。故障诊断不必离线的状态下被诊断和更正   
 
   支持Ipv6：Quagga不仅支持Ipv4，还支持Ipv6。   
 
@@ -43,15 +41,11 @@ Quagga路由守护程序已经使这一切变为现实。因为Quagga支持Ipv4�
 
 需要。   
 
-  使用Quagga的另一个好处是，这个软件配置的很多方面跟Cisco的IOS配置几乎完全相同，如果你在Cisco IOS环境中工作，可
-
-以轻松的过渡到Quagga系统，同时，使用Quagga特能让你积累起丰富的类似于使用Cisco IOS路由器的经验和知识。   
+  使用Quagga的另一个好处是，这个软件配置的很多方面跟Cisco的IOS配置几乎完全相同，如果你在Cisco IOS环境中工作，可以轻松的过渡到Quagga系统，同时，使用Quagga特别能让你积累起丰富的类似于使用Cisco IOS路由器的经验和知识。   
 
   总之，现在完全可以拿一台PC机来完成一些必须用昂贵的Cisco路由器才能完成的比较复杂的路由协议处理控制功能。   
 
-  由于各个linux发行版都有quagga路由器软件的安装包，所以下面用ubuntu为例进行安装配置，其他CentOS，Debian，RedHat
-
-安装配置过程大同小异。   
+  由于各个linux发行版都有quagga路由器软件的安装包，所以下面用ubuntu为例进行安装配置，其他CentOS，Debian，RedHat安装配置过程大同小异。   
 
 Ubuntu 14.04/16.04 安装配置quagga路由器软件：   
 
@@ -64,9 +58,7 @@ $su
 #cd /   
 #sudo apt-get install quagga   
  
-在Linux系统中，路由表和转发数据包的功能都是Linux内核所提供。在我们的Ubuntu系统中，默认情况下是没有开启数据包转发
-
-功能的。开启方式：   
+在Linux系统中，路由表和转发数据包的功能都是Linux内核所提供。在我们的Ubuntu系统中，默认情况下是没有开启数据包转发功能的。开启方式：   
 #sudo nano /etc/sysctl.conf   
 
 在打开的文件最后一行加入并保存退出   
@@ -82,9 +74,7 @@ net.ipv4.ip_forward = 1
 output：   
 net.ipv4.ip_forward = 1   
  
-Quagga配置文件例子在/usr/share/doc/quagga/examples/中，每个功能对应各自配置文件，需将其拷贝至/etc/quagga并改名及
-
-权限   
+Quagga配置文件例子在/usr/share/doc/quagga/examples/中，每个功能对应各自配置文件，需将其拷贝至/etc/quagga并改名及权限   
 
 #cp /usr/share/doc/quagga/examples/*.sample /etc/quagga/   
 #cd /etc/quagga   
@@ -143,12 +133,14 @@ root@bridge:/#sudo /etc/init.d/quagga restart
 
 注意：如果使用Telnet进行配置，可能需要设置密码但不一定是必须，否则会报错   
 如下所示：   
+
 #telnet localhost zebra   
 Trying 127.0.0.1...   
 Connected to localhost.   
 Escape character is '^]'.   
 Vty password is not set.   
 Connection closed by foreign host.   
+
 因此需要先设置密码：   
 
 为zebra进程设置telnet密码   
@@ -195,6 +187,7 @@ exit退出到上一层命令提示符，直至完全退出quagga回到linux提�
 在如何一层提示符下都可以打 ? 号显示可用命令，命令后都可以跟 ? 号显示后面的选项   
 
 
+Review by Liang
 
 
 
