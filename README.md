@@ -143,7 +143,7 @@ root@bridge:/#sudo /etc/init.d/quagga restart
 
 注意：如果使用Telnet进行配置，可能需要设置密码但不一定是必须，否则会报错
 如下所示：
-# telnet localhost zebra
+#telnet localhost zebra
 Trying 127.0.0.1...
 Connected to localhost.
 Escape character is '^]'.
