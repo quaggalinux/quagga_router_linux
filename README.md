@@ -191,7 +191,7 @@ exit退出到上一层命令提示符，直至完全退出quagga回到linux提�
 在任何一层提示符下都可以打 ? 号显示可用命令，命令后都可以跟 ? 号显示后面的选项，如果你习惯了Cisco IOS，这个是必须的^_^   
 
 
-Review by Liang
+Reviewed by Liang
 
 
 
