@@ -1,5 +1,5 @@
 # quagga_router_linux
-quagga路由器软件在linux安装设置（ubuntu,CentOS,Debian,RedHat）- Robin
+quagga路由器软件在linux安装设置（ubuntu,CentOS,Debian,RedHat）
 
 经常有很多童鞋手上没有适合刷OpenWRT固件的路由器或一台独立机器安装OpenWRT，但又需要一个功能完善（可完成Cisco路由器大部分功能），搭建环境灵活的软件路由器，那下面介绍的运行在linux系统上的Quagga就是非常好的选择
 
